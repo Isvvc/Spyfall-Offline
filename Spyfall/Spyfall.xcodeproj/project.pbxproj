@@ -17,6 +17,7 @@
 		597A68DF2480E38200D0C0BC /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 597A68DE2480E38200D0C0BC /* SwiftyJSON */; };
 		597A68E12480E45D00D0C0BC /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597A68E02480E45D00D0C0BC /* Game.swift */; };
 		597A68E42480E93900D0C0BC /* EFQRCode in Frameworks */ = {isa = PBXBuildFile; productRef = 597A68E32480E93900D0C0BC /* EFQRCode */; };
+		597A68E72480ED1300D0C0BC /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 597A68E62480ED1300D0C0BC /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 			files = (
 				597A68DF2480E38200D0C0BC /* SwiftyJSON in Frameworks */,
 				597A68E42480E93900D0C0BC /* EFQRCode in Frameworks */,
+				597A68E72480ED1300D0C0BC /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +106,7 @@
 			packageProductDependencies = (
 				597A68DE2480E38200D0C0BC /* SwiftyJSON */,
 				597A68E32480E93900D0C0BC /* EFQRCode */,
+				597A68E62480ED1300D0C0BC /* CodeScanner */,
 			);
 			productName = Spyfall;
 			productReference = 597A68C42480E26600D0C0BC /* Spyfall.app */;
@@ -136,6 +139,7 @@
 			packageReferences = (
 				597A68DD2480E38200D0C0BC /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				597A68E22480E93800D0C0BC /* XCRemoteSwiftPackageReference "EFQRCode" */,
+				597A68E52480ED1300D0C0BC /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = 597A68C52480E26600D0C0BC /* Products */;
 			projectDirPath = "";
@@ -380,6 +384,14 @@
 				minimumVersion = 5.1.6;
 			};
 		};
+		597A68E52480ED1300D0C0BC /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -392,6 +404,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 597A68E22480E93800D0C0BC /* XCRemoteSwiftPackageReference "EFQRCode" */;
 			productName = EFQRCode;
+		};
+		597A68E62480ED1300D0C0BC /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 597A68E52480ED1300D0C0BC /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

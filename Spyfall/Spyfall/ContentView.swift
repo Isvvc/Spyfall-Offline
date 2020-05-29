@@ -7,11 +7,24 @@
 //
 
 import SwiftUI
-import CoreImage.CIFilterBuiltins
+import CodeScanner
 
 struct ContentView: View {
     @ObservedObject private var gameController = GameController()
+    
     @State private var numPlayers: Int = 4
+    @State private var isShowingScanner = false
+    
+    func handleScan(result: Result<String, CodeScannerView.ScanError>) {
+        self.isShowingScanner = false
+        
+        switch result {
+        case .success(let code):
+            gameController.joinGame(code)
+        case .failure(_):
+            print("Scanning failed")
+        }
+    }
     
     var body: some View {
         VStack {
@@ -36,7 +49,18 @@ struct ContentView: View {
             }) {
                 Text("Create Game")
             }
+            
+            Button(action: {
+                self.isShowingScanner = true
+            }) {
+                Text("Join game")
+            }
+            .padding(.top)
+            
             Spacer()
+        }
+        .sheet(isPresented: $isShowingScanner) {
+            CodeScannerView(codeTypes: [.qr], completion: self.handleScan)
         }
     }
 }

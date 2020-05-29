@@ -25,4 +25,9 @@ class GameController: ObservableObject {
         let game = Game(location: location, player: 0, spy: spy)
         currentGame = game
     }
+    
+    func joinGame(_ string: String) {
+        let json = JSON(parseJSON: string)
+        currentGame = Game(json: json)
+    }
 }
