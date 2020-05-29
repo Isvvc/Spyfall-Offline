@@ -70,10 +70,9 @@
 			children = (
 				597A68C72480E26600D0C0BC /* AppDelegate.swift */,
 				597A68C92480E26600D0C0BC /* SceneDelegate.swift */,
-				597A68E02480E45D00D0C0BC /* Game.swift */,
-				597A68DB2480E28900D0C0BC /* GameController.swift */,
-				597A68CB2480E26600D0C0BC /* ContentView.swift */,
-				59F6E2A024818F870093C346 /* GameView.swift */,
+				59F6E2A224819B0E0093C346 /* Model */,
+				59F6E2A324819B230093C346 /* Controllers */,
+				59F6E2A424819B2B0093C346 /* Views */,
 				597A68CD2480E26A00D0C0BC /* Assets.xcassets */,
 				597A68D22480E26A00D0C0BC /* LaunchScreen.storyboard */,
 				597A68D52480E26A00D0C0BC /* Info.plist */,
@@ -88,6 +87,31 @@
 				597A68D02480E26A00D0C0BC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		59F6E2A224819B0E0093C346 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				597A68E02480E45D00D0C0BC /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		59F6E2A324819B230093C346 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				597A68DB2480E28900D0C0BC /* GameController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		59F6E2A424819B2B0093C346 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				597A68CB2480E26600D0C0BC /* ContentView.swift */,
+				59F6E2A024818F870093C346 /* GameView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

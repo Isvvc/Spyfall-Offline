@@ -37,7 +37,7 @@ struct GameView: View {
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         let gameController = GameController()
-        gameController.createGame(players: 4)
+        gameController.createGame(players: 2)
         return GameView(gameController: gameController)
     }
 }
