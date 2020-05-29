@@ -21,6 +21,7 @@ struct GameView: View {
                 Text("Hide").tag(0)
                 Text("QR Code").tag(1)
                 Text("Role/Location").tag(2)
+                Text("All Locations").tag(3)
             }.pickerStyle(SegmentedPickerStyle())
             
             if display == 1 && gameController.currentGame?.qrCode != nil {
@@ -29,6 +30,14 @@ struct GameView: View {
                 Spacer()
                 Text(gameController.currentLocation!)
                 Spacer()
+            } else if display == 3 {
+                ScrollView {
+                    VStack {
+                        ForEach(gameController.locations, id: \.self) { location in
+                            Text(location)
+                        }
+                    }
+                }
             }
         }
     }

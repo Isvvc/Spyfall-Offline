@@ -11,9 +11,32 @@ import SwiftyJSON
 
 class GameController: ObservableObject {
     var locations: [String] = [
+        "Airplane",
         "Bank",
+        "Beach",
+        "Broadway Theater",
+        "Casino",
+        "Cathedral",
+        "Circus Tent",
+        "Corporate Party",
+        "Crusader Army",
+        "Day Spa",
+        "Embassy",
+        "Hospital",
+        "Hotel",
+        "Military Base",
+        "Movie Studio",
+        "Ocean Liner",
+        "Passenger Train",
         "Pirate Ship",
-        "Supermarket"
+        "Polar Station",
+        "Police Station",
+        "Restaurant",
+        "Service Station",
+        "Space Station",
+        "Submarine",
+        "Supermarket",
+        "University"
     ]
     
     @Published var currentGame: Game?
