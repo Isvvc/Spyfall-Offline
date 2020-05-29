@@ -18,6 +18,15 @@ class GameController: ObservableObject {
     
     @Published var currentGame: Game?
     
+    var currentLocation: String? {
+        guard let currentGame = currentGame else { return nil }
+        if currentGame.player == currentGame.spy {
+            return "Spy"
+        } else {
+            return locations[currentGame.location]
+        }
+    }
+    
     func createGame(players: Int) {
         let location = Int.random(in: 0..<locations.count)
         let spy = Int.random(in: 0..<players)

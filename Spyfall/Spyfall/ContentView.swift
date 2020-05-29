@@ -14,6 +14,7 @@ struct ContentView: View {
     
     @State private var numPlayers: Int = 4
     @State private var isShowingScanner = false
+    @State private var isShowingLocation = false
     
     func handleScan(result: Result<String, CodeScannerView.ScanError>) {
         self.isShowingScanner = false
@@ -34,6 +35,16 @@ struct ContentView: View {
             Spacer()
             
             if gameController.currentGame != nil {
+                Text("Player: \(gameController.currentGame!.player + 1)")
+                
+                Button("\(isShowingLocation ? "Hide" : "Show") role/location") {
+                    self.isShowingLocation.toggle()
+                }.padding(.top)
+                
+                if isShowingLocation {
+                    Text(gameController.currentLocation!)
+                }
+                
                 Image(decorative: gameController.currentGame!.qrCode!, scale: 1).resizable().scaledToFit()
                 Spacer()
             }
@@ -51,6 +62,7 @@ struct ContentView: View {
             }
             
             Button(action: {
+                self.isShowingLocation = false
                 self.isShowingScanner = true
             }) {
                 Text("Join game")
