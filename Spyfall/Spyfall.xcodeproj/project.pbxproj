@@ -18,6 +18,7 @@
 		597A68E12480E45D00D0C0BC /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597A68E02480E45D00D0C0BC /* Game.swift */; };
 		597A68E42480E93900D0C0BC /* EFQRCode in Frameworks */ = {isa = PBXBuildFile; productRef = 597A68E32480E93900D0C0BC /* EFQRCode */; };
 		597A68E72480ED1300D0C0BC /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 597A68E62480ED1300D0C0BC /* CodeScanner */; };
+		59F6E2A124818F870093C346 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F6E2A024818F870093C346 /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		597A68D52480E26A00D0C0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		597A68DB2480E28900D0C0BC /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		597A68E02480E45D00D0C0BC /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		59F6E2A024818F870093C346 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				597A68E02480E45D00D0C0BC /* Game.swift */,
 				597A68DB2480E28900D0C0BC /* GameController.swift */,
 				597A68CB2480E26600D0C0BC /* ContentView.swift */,
+				59F6E2A024818F870093C346 /* GameView.swift */,
 				597A68CD2480E26A00D0C0BC /* Assets.xcassets */,
 				597A68D22480E26A00D0C0BC /* LaunchScreen.storyboard */,
 				597A68D52480E26A00D0C0BC /* Info.plist */,
@@ -172,6 +175,7 @@
 				597A68E12480E45D00D0C0BC /* Game.swift in Sources */,
 				597A68DC2480E28900D0C0BC /* GameController.swift in Sources */,
 				597A68CA2480E26600D0C0BC /* SceneDelegate.swift in Sources */,
+				59F6E2A124818F870093C346 /* GameView.swift in Sources */,
 				597A68CC2480E26600D0C0BC /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
