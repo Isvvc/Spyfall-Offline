@@ -9,14 +9,14 @@
 import Foundation
 import SwiftyJSON
 
-class GameController {
+class GameController: ObservableObject {
     var locations: [String] = [
         "Bank",
         "Pirate Ship",
         "Supermarket"
     ]
     
-    var currentGame: Game?
+    @Published var currentGame: Game?
     
     func createGame(players: Int) {
         let location = Int.random(in: 0..<locations.count)

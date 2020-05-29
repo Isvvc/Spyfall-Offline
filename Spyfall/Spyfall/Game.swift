@@ -8,8 +8,10 @@
 
 import Foundation
 import SwiftyJSON
+import UIKit
+import EFQRCode
 
-struct Game {
+struct Game: Equatable {
     var location: Int
     var player: Int
     var spy: Int
@@ -20,6 +22,11 @@ struct Game {
             "player": player,
             "spy": spy
         ])
+    }
+    
+    var qrCode: CGImage? {
+        guard let jsonString = jsonRepresentation.rawString() else { return nil }
+        return EFQRCode.generate(content: jsonString)
     }
 }
 

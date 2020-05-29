@@ -10,15 +10,21 @@ import SwiftUI
 import CoreImage.CIFilterBuiltins
 
 struct ContentView: View {
-    var gameController = GameController()
-    
+    @ObservedObject private var gameController = GameController()
     @State private var numPlayers: Int = 4
     
     var body: some View {
         VStack {
             Text("Spyfall").font(.largeTitle)
                 .padding()
+            
             Spacer()
+            
+            if gameController.currentGame != nil {
+                Image(decorative: gameController.currentGame!.qrCode!, scale: 1).resizable().scaledToFit()
+                Spacer()
+            }
+            
             HStack {
                 Stepper("Number of players", value: $numPlayers, in: 1...100)
                 Text("\(numPlayers)")
